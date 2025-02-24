@@ -1,97 +1,203 @@
-/* ✅ Google Fonts 적용 */
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
+/* 기본 스타일 */
 body {
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.8;
-    margin: 0;
-    padding: 0;
     background-color: #f9f9f9;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* ✅ 네비게이션 바 */
+/* 헤더 스타일 */
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 네비게이션 스타일 */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
+    left: 0;
     width: 100%;
-    background: white;
-    padding: 15px 0;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    background: #444;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
 }
 
+/* 네비게이션 메뉴 스타일 */
 .navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
 }
 
 .navbar ul li a {
-    color: #333;
+    color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 12px 20px;
-    transition: all 0.3s ease-in-out;
-    font-weight: 600;
+    padding: 10px 15px;
 }
 
 .navbar ul li a:hover {
     background: #0077cc;
-    color: white;
+    border-radius: 5px;
+}
+
+/* 본문 컨텐츠 스타일 */
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 섹션 스타일 (배경 제거, 간격 조정) */
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+    border-left: 5px solid #0077cc;
+    padding-left: 15px;
+}
+
+/* 자기소개 스타일 */
+#about {
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+}
+
+.project {
+    background: #f9f9f9;
+    padding: 15px;
     border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
 
-/* ✅ 프로젝트 카드 스타일 */
-.project-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-    margin-bottom: 30px;
-    transition: all 0.3s ease-in-out;
-}
-
-.project-card:hover {
+.project:hover {
+    background: #0077cc;
+    color: white;
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* ✅ 기술 태그 스타일 */
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0077cc;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    tr
+}
+
+.btn-link:hover {
+    background: #005bb5;
+}
+
+/* 기술 스택 전체 스타일 */
+#tech-stack {
+    padding-top: 10px;
+}
+
+/* 기술 스택 카테고리 스타일 */
+.stack-category {
+    margin-bottom: 20px;
+}
+
+.stack-category strong {
+    font-size: 18px;
+    color: #222;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 기술 태그 스타일 */
+.stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 .tag {
     display: inline-block;
-    padding: 8px 16px;
-    font-size: 15px;
+    padding: 6px 14px;
+    font-size: 14px;
     font-weight: bold;
     color: white;
-    border-radius: 6px;
+    border-radius: 5px;
     transition: 0.2s ease-in-out;
 }
 
 .tag:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
     opacity: 0.9;
 }
 
-/* ✅ 태그 색상 */
-.orange { background-color: #f16529; }
-.blue { background-color: #2965f1; }
-.yellow { background-color: #f7df1e; color: #222; }
-.lightblue { background-color: #0769ad; }
-.green { background-color: #28a745; }
-.purple { background-color: #7952b3; }
-.darkblue { background-color: #232f3e; }
-.black { background-color: #1a1a1a; }
-.dark { background-color: #333; }
-.red { background-color: #d24939; }
+/* 태그 색상 */
+.orange { background-color: #f16529; }  /* HTML5 */
+.blue { background-color: #2965f1; }   /* CSS3, MySQL */
+.yellow { background-color: #f7df1e; color: #222; } /* JavaScript */
+.lightblue { background-color: #0769ad; }  /* jQuery, Docker */
+.green { background-color: #28a745; }  /* Thymeleaf, Spring Boot, NGINX */
+.purple { background-color: #7952b3; } /* Bootstrap */
+.darkblue { background-color: #232f3e; } /* AWS EC2 */
+.black { background-color: #1a1a1a; }  /* MyBatis */
+.dark { background-color: #333; }  /* WebSocket */
+.red { background-color: #d24939; }  /* Jenkins */
 
-/* ✅ 푸터 */
+/* 프로젝트 및 스크린샷 스타일 */
+#projects h3, #screenshots h2, #architecture h2 {
+    font-size: 20px;
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+#architecture img, #screenshots img {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 연락처 스타일 */
+#contact a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* 푸터 스타일 */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #333;
+    padding: 15px;
+    background: #222;
     color: white;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+/* 부드러운 스크롤 적용 */
+html {
+    scroll-behavior: smooth;
 }

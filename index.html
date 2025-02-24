@@ -32,8 +32,6 @@
 
     <section id="tech-stack">
         <h2>기술 스택</h2>
-
-        <!-- Frontend -->
         <div class="stack-category">
             <strong>Frontend</strong>
             <div class="stack-tags">
@@ -46,7 +44,6 @@
             </div>
         </div>
 
-        <!-- Backend -->
         <div class="stack-category">
             <strong>Backend</strong>
             <div class="stack-tags">
@@ -57,7 +54,6 @@
             </div>
         </div>
 
-        <!-- Database & Infrastructure -->
         <div class="stack-category">
             <strong>Database & Infrastructure</strong>
             <div class="stack-tags">
@@ -69,7 +65,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="projects">
         <h2>프로젝트</h2>
@@ -107,15 +102,15 @@
         <img src="./public/images/SystemArchitecture.png" alt="프로젝트 아키텍처 이미지">
     </section>
 
-    <section id="screenshots_1">
-        <h2>요기용 구현 서비스</h2>
+    <section id="screenshots">
+        <h2>서비스 스크린샷</h2>
         <img src="./public/images/image01.png" alt="서비스 화면 1">
         <img src="./public/images/image03.png" alt="서비스 화면 2">
-        <img src="./public/images/image04.png" alt="서비스 화면 2">
     </section>
+
     <section id="screenshots_2">
         <h2>OneStack 구현 서비스</h2>
-        <a href="https://www.onestack.store/" target="_blank">onestack 방문하기</a>
+        <a class="btn-link" href="https://www.onestack.store/" target="_blank">onestack 방문하기</a>
     </section>
 
     <section id="contact">
@@ -132,11 +127,8 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const navbar = document.getElementById("navbar");
-        const header = document.querySelector("header");
-        const headerHeight = header.offsetHeight; // 헤더 높이 계산
-
         window.addEventListener("scroll", function () {
-            if (window.scrollY > headerHeight) {
+            if (window.scrollY > 50) {
                 navbar.classList.add("sticky");
             } else {
                 navbar.classList.remove("sticky");
