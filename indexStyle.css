@@ -73,7 +73,6 @@ h2 {
     font-weight: bold;
     color: #222;
     margin-bottom: 15px;
-    border-left: 5px solid #0077cc;
     padding-left: 15px;
 }
 
@@ -126,7 +125,7 @@ h2 {
 }
 
 .project {
-    background: #ffffff;
+    background: #fff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -146,7 +145,7 @@ h2 {
 }
 
 .project:hover h3 {
-    color: #ffffff;
+    color: #fff;
 }
 
 /* 기술 스택 전체 스타일 */
@@ -271,12 +270,62 @@ html {
     height: auto;
     max-height: 250px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .image-gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌟 이미지 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.modal .close:hover {
+    color: #f87171;
+}
+
+/* 🌟 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
