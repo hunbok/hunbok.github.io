@@ -9,68 +9,16 @@ body {
 
 /* 🌟 네비게이션 바 */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
-    background: #444;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-}
-
-.navbar ul li a:hover {
-    background: #0077cc;
-    border-radius: 5px;
-}
-
-/* 🌟 본문 컨텐츠 스타일 */
-.content {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* 🌟 섹션 스타일 */
-section {
-    margin-bottom: 50px;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #222;
-    border-left: 5px solid #0077cc;
-    padding-left: 15px;
-    margin-bottom: 15px;
-}
-
 /* 🌟 기술 태그 스타일 */
-.stack-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 .tag {
     display: inline-block;
     padding: 6px 14px;
@@ -78,38 +26,30 @@ h2 {
     font-weight: bold;
     color: white;
     border-radius: 5px;
+    transition: 0.2s ease-in-out;
 }
 
-/* 🌟 프로젝트 카드 스타일 */
-.project-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.tag:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
-/* 🌟 연락처 스타일 */
-#contact a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-#contact a:hover {
-    text-decoration: underline;
-}
+/* 🌟 태그 색상 */
+.orange { background-color: #f16529; }  /* HTML5 */
+.blue { background-color: #2965f1; }   /* CSS3, MySQL */
+.yellow { background-color: #f7df1e; color: #222; } /* JavaScript */
+.lightblue { background-color: #0769ad; }  /* jQuery, Docker */
+.green { background-color: #28a745; }  /* Thymeleaf, Spring Boot, NGINX */
+.purple { background-color: #7952b3; } /* Bootstrap */
+.darkblue { background-color: #232f3e; } /* AWS EC2 */
+.black { background-color: #1a1a1a; }  /* MyBatis */
+.dark { background-color: #333; }  /* WebSocket */
+.red { background-color: #d24939; }  /* Jenkins */
 
-/* 🌟 푸터 스타일 */
+/* 🌟 푸터 */
 footer {
     text-align: center;
-    padding: 15px;
-    background: #222;
+    padding: 20px;
+    background: #333;
     color: white;
-    margin-top: 50px;
-    font-size: 14px;
-}
-
-/* 🌟 부드러운 스크롤 */
-html {
-    scroll-behavior: smooth;
 }

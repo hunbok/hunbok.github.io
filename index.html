@@ -5,98 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hunbok Portfolio</title>
     <link rel="stylesheet" href="indexStyle.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 <!-- 네비게이션 바 -->
 <nav class="navbar">
-    <ul>
-        <li><a href="#about">자기소개</a></li>
-        <li><a href="#tech-stack">기술 스택</a></li>
-        <li><a href="#projects">프로젝트</a></li>
-        <li><a href="#architecture">시스템 아키텍처</a></li>
-        <li><a href="#screenshots">서비스 스크린샷</a></li>
-        <li><a href="#contact">연락처</a></li>
-    </ul>
+    <div class="nav-container">
+        <h1 class="logo">Hunbok's Portfolio</h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 </nav>
 
-<div class="content">
-    <!-- 자기소개 -->
-    <section id="about">
-        <h1>이헌복</h1>
-        <p>신입 / 풀스택 개발자</p>
-        <p>프론트엔드와 백엔드의 균형을 맞추며, 클린 코드와 협업을 지향하는 신입 풀스택 개발자입니다.</p>
-    </section>
+<!-- 메인 소개 섹션 -->
+<header class="hero">
+    <div class="hero-content">
+        <h2>이헌복</h2>
+        <h3>신입 / 풀스택 개발자 포트폴리오</h3>
+        <p>본질에 집중하는 백엔드 & 프론트엔드 개발자</p>
+        <a href="#about" class="btn">더 알아보기 ↓</a>
+    </div>
+</header>
 
-    <!-- 기술 스택 -->
-    <section id="tech-stack">
-        <h2>기술 스택</h2>
-        <div class="stack-category">
-            <strong>Frontend</strong>
-            <div class="stack-tags">
-                <span class="tag orange">HTML5</span>
-                <span class="tag blue">CSS3</span>
-                <span class="tag yellow">JavaScript</span>
-                <span class="tag lightblue">jQuery</span>
-                <span class="tag green">Thymeleaf</span>
-                <span class="tag purple">Bootstrap</span>
-            </div>
+<!-- About Me -->
+<section id="about" class="about-section">
+    <h2>ABOUT ME</h2>
+    <div class="about-container">
+        <div class="info-box">
+            <p><strong>이름:</strong> 이헌복</p>
+            <p><strong>이메일:</strong> hunbok@gmail.com</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/hunbok" target="_blank">github.com/hunbok</a></p>
         </div>
-        <div class="stack-category">
-            <strong>Backend</strong>
-            <div class="stack-tags">
-                <span class="tag darkblue">Java</span>
-                <span class="tag green">Spring Boot</span>
-                <span class="tag black">MyBatis</span>
-                <span class="tag dark">WebSocket</span>
-            </div>
-        </div>
-        <div class="stack-category">
-            <strong>Database & Infrastructure</strong>
-            <div class="stack-tags">
-                <span class="tag blue">MySQL</span>
-                <span class="tag darkblue">AWS EC2</span>
-                <span class="tag green">NGINX</span>
-                <span class="tag lightblue">Docker</span>
-                <span class="tag red">Jenkins</span>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 프로젝트 -->
-    <section id="projects">
-        <h2>프로젝트</h2>
-        <div class="project-card">
-            <h3>1차 프로젝트</h3>
-            <p>소개, 팀성과, 핵심기능, 개인 기여</p>
+<!-- Skills -->
+<section id="skills" class="skills-section">
+    <h2>SKILLS</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3>Frontend</h3>
+            <span class="tag orange"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tag blue"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="tag yellow"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tag lightblue"><i class="fas fa-code"></i> jQuery</span>
+            <span class="tag green"><i class="fas fa-leaf"></i> Thymeleaf</span>
+            <span class="tag purple"><i class="fab fa-bootstrap"></i> Bootstrap</span>
         </div>
-        <div class="project-card">
-            <h3>2차 프로젝트</h3>
-            <p>소개, 팀성과, 핵심기능, 개인 기여</p>
+        <div class="skill-card">
+            <h3>Backend</h3>
+            <span class="tag darkblue"><i class="fab fa-java"></i> Java</span>
+            <span class="tag green"><i class="fas fa-cogs"></i> Spring Boot</span>
+            <span class="tag black"><i class="fas fa-database"></i> MyBatis</span>
+            <span class="tag dark"><i class="fas fa-plug"></i> WebSocket</span>
         </div>
-    </section>
+        <div class="skill-card">
+            <h3>Database & Infra</h3>
+            <span class="tag blue"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tag darkblue"><i class="fab fa-aws"></i> AWS EC2</span>
+            <span class="tag green"><i class="fas fa-server"></i> NGINX</span>
+            <span class="tag lightblue"><i class="fab fa-docker"></i> Docker</span>
+            <span class="tag red"><i class="fab fa-jenkins"></i> Jenkins</span>
+        </div>
+    </div>
+</section>
 
-    <!-- 아키텍처 -->
-    <section id="architecture">
-        <h2>프로젝트 시스템 아키텍처</h2>
-        <img src="architecture.png" alt="프로젝트 아키텍처 이미지">
-    </section>
+<!-- Projects -->
+<section id="projects" class="projects-section">
+    <h2>PROJECTS</h2>
+    <div class="project-card">
+        <h3>1차 프로젝트</h3>
+        <p>소개, 팀성과, 핵심기능, 개인 기여</p>
+    </div>
+    <div class="project-card">
+        <h3>2차 프로젝트</h3>
+        <p>소개, 팀성과, 핵심기능, 개인 기여</p>
+    </div>
+</section>
 
-    <!-- 스크린샷 -->
-    <section id="screenshots">
-        <h2>실제 구현된 서비스 스크린샷</h2>
-        <img src="screenshot1.png" alt="서비스 화면 1">
-        <img src="screenshot2.png" alt="서비스 화면 2">
-    </section>
-
-    <!-- 연락처 -->
-    <section id="contact">
-        <h2>연락처</h2>
-        <p>Email: <a href="mailto:hunbok@gmail.com">hunbok@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/hunbok" target="_blank">github.com/hunbok</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/hunbok" target="_blank">linkedin.com/in/hunbok</a></p>
-    </section>
-</div>
+<!-- Contact -->
+<section id="contact" class="contact-section">
+    <h2>CONTACT</h2>
+    <p>Email: <a href="mailto:hunbok@gmail.com">hunbok@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/hunbok" target="_blank">github.com/hunbok</a></p>
+</section>
 
 <footer>
     <p>© 2024 Hunbok. All Rights Reserved.</p>
