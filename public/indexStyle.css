@@ -125,7 +125,7 @@ h2 {
 }
 
 .project {
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -145,7 +145,8 @@ h2 {
 }
 
 .project:hover h3 {
-    color: #fff;
+    color: #ffffff; /* 제목을 흰색으로 변경 */
+    transition: color 0.3s ease-in-out;
 }
 
 /* 기술 스택 전체 스타일 */
