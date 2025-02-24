@@ -150,6 +150,7 @@ h2 {
 
 .project:hover h3,
 .project:hover p,
+.project:hover ul
 .project:hover li {
     color: #ffffff !important; /* 모든 텍스트 흰색 */
 }
