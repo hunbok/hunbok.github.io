@@ -145,7 +145,7 @@ h2 {
 }
 
 .project:hover h3 {
-    color: #ffffff; /* 제목을 흰색으로 변경 */
+    color: #ffffff !important;
     transition: color 0.3s ease-in-out;
 }
 
