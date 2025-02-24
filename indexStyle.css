@@ -1,15 +1,15 @@
-/* 기본 스타일 */
+/* 🌟 기본 스타일 */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-top: 60px;
+    padding-top: 110px; /* 헤더 + 네비게이션 높이 만큼 여백 추가 */
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* 헤더 스타일 */
+/* 🌟 헤더 스타일 */
 header {
     background: #222;
     color: white;
@@ -17,10 +17,10 @@ header {
     padding: 20px 0;
 }
 
-/* 내비게이션 스타일 */
-nav {
+/* 🌟 네비게이션 스타일 (헤더 아래 고정) */
+.navbar {
     position: fixed;
-    top: 0;
+    top: 60px; /* 헤더 아래 위치 */
     left: 0;
     width: 100%;
     background: #444;
@@ -29,42 +29,49 @@ nav {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000; /* 다른 요소 위로 배치 */
 }
-nav ul {
+
+/* 🌟 네비게이션 메뉴 스타일 */
+.navbar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
-nav ul li {
-    display: inline;
+
+.navbar ul li {
     margin: 0 15px;
 }
-nav ul li a {
+
+.navbar ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-}
-nav ul li a:hover {
-    text-decoration: underline;
+    padding: 10px 15px;
 }
 
-/* 섹션 스타일 */
-section {
+.navbar ul li a:hover {
+    background: #0077cc;
+    border-radius: 5px;
+}
+
+/* 🌟 컨텐츠 스타일 */
+.content {
     max-width: 900px;
-    margin: 30px auto;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* 🌟 섹션 스타일 */
+section {
     background: white;
     padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #222;
-    text-align: center;
-    border-bottom: 2px solid #0077cc;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-/* 프로젝트 카드 스타일 */
+/* 🌟 프로젝트 카드 스타일 */
 .project {
     margin: 20px 0;
     padding: 15px;
@@ -72,11 +79,12 @@ h2 {
     border-radius: 8px;
     background: #fafafa;
 }
+
 .project h3 {
     color: #0077cc;
 }
 
-/* 아키텍처 및 스크린샷 스타일 */
+/* 🌟 아키텍처 및 스크린샷 스타일 */
 #architecture img, #screenshots img {
     display: block;
     max-width: 100%;
@@ -85,7 +93,7 @@ h2 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* 연락처 스타일 */
+/* 🌟 연락처 스타일 */
 #contact a {
     color: #0077cc;
     text-decoration: none;
@@ -94,11 +102,16 @@ h2 {
     text-decoration: underline;
 }
 
-/* 푸터 스타일 */
+/* 🌟 푸터 스타일 */
 footer {
     text-align: center;
     padding: 15px;
     background: #222;
     color: white;
     margin-top: 30px;
+}
+
+/* 🌟 부드러운 스크롤 적용 */
+html {
+    scroll-behavior: smooth;
 }
