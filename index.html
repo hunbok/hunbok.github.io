@@ -76,12 +76,11 @@
     <p>© 2024 Hunbok. All Rights Reserved.</p>
 </footer>
 
-<!-- JavaScript 추가 -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const navbar = document.getElementById("navbar");
         const header = document.querySelector("header");
-        const headerHeight = header.offsetHeight; // 헤더 높이 저장
+        const headerHeight = header.offsetHeight; // 헤더 높이 계산
 
         window.addEventListener("scroll", function () {
             if (window.scrollY > headerHeight) {
@@ -92,5 +91,6 @@
         });
     });
 </script>
+
 </body>
 </html>
