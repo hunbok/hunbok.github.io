@@ -16,14 +16,22 @@ header {
     padding: 20px 0;
 }
 
-/* 🌟 네비게이션 스타일 (헤더 아래 고정) */
+/* 🌟 네비게이션 스타일 */
 .navbar {
-    position: fixed;
-    left: 0;
     width: 100%;
     background: #444;
     padding: 10px 0;
     text-align: center;
+    transition: all 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+/* 🌟 스크롤 시 네비게이션이 고정되도록 설정 */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #222; /* 더 어두운 배경으로 변경 */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
@@ -56,7 +64,7 @@ header {
 /* 🌟 본문이 네비게이션과 겹치지 않도록 여백 추가 */
 .content {
     max-width: 900px;
-    margin: 100px auto 20px; /* 네비게이션 높이만큼 여백 추가 */
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -109,7 +117,7 @@ footer {
     margin-top: 30px;
 }
 
-/* 🌟 부드러운 스크롤 기능 적용 */
+/* 🌟 부드러운 스크롤 적용 */
 html {
     scroll-behavior: smooth;
 }
