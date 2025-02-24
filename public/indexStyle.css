@@ -145,8 +145,13 @@ h2 {
 }
 
 .project:hover h3 {
-    color: #ffffff !important;
     transition: color 0.3s ease-in-out;
+}
+
+.project:hover h3,
+.project:hover p,
+.project:hover li {
+    color: #ffffff !important; /* 모든 텍스트 흰색 */
 }
 
 /* 기술 스택 전체 스타일 */
