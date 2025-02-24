@@ -1,116 +1,104 @@
-/* 🌟 전체 스타일 */
+/* 기본 스타일 */
 body {
     font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
-    padding-top: 60px; /* 네비게이션 높이만큼 여백 추가 */
-    background-color: #f4f4f9;
+    padding: 0;
+    padding-top: 60px;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* 🌟 상단 고정 네비게이션 스타일 */
-.navbar {
+/* 헤더 스타일 */
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 내비게이션 스타일 */
+nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #0077cc;
-    color: white;
+    background: #444;
+    padding: 10px 0;
     text-align: center;
-    padding: 15px 0;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* 다른 요소 위에 표시 */
+    z-index: 1000; /* 다른 요소 위로 배치 */
 }
-
-.navbar ul {
+nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
 }
-
-.navbar ul li {
+nav ul li {
+    display: inline;
     margin: 0 15px;
 }
-
-.navbar ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 15px;
+    font-size: 18px;
 }
-
-.navbar ul li a:hover {
-    background: #005fa3;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-/* 🌟 컨텐츠 스타일 */
-.content {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-/* 🌟 섹션 스타일 */
-section {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 🌟 프로젝트 스타일 */
-.project {
-    background: #f9f9f9;
-    padding: 15px;
-    border-left: 5px solid #0077cc;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* 🌟 이미지 스타일 */
-img {
-    max-width: 100%;
-    display: block;
-    margin: 10px auto;
-    border-radius: 5px;
-}
-
-/* 🌟 연락처 스타일 */
-section#contact a {
-    color: #0077cc;
-    font-weight: bold;
-}
-
-section#contact a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* 🌟 푸터 스타일 */
+/* 섹션 스타일 */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #222;
+    text-align: center;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* 프로젝트 카드 스타일 */
+.project {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+.project h3 {
+    color: #0077cc;
+}
+
+/* 아키텍처 및 스크린샷 스타일 */
+#architecture img, #screenshots img {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 연락처 스타일 */
+#contact a {
+    color: #0077cc;
+    text-decoration: none;
+}
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* 푸터 스타일 */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #333;
+    padding: 15px;
+    background: #222;
     color: white;
-    margin-top: 20px;
-}
-
-/* 🌟 부드러운 스크롤 적용 */
-html {
-    scroll-behavior: smooth;
-}
-
-/* 🌟 반응형 디자인 */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .navbar ul li {
-        margin: 5px 0;
-    }
+    margin-top: 30px;
 }
