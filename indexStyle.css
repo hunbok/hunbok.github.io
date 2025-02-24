@@ -19,7 +19,6 @@ header {
 /* 🌟 네비게이션 스타일 (헤더 아래 고정) */
 .navbar {
     position: fixed;
-    top: 60px; /* 헤더 바로 아래 위치 */
     left: 0;
     width: 100%;
     background: #444;
