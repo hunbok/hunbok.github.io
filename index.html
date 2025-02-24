@@ -13,6 +13,7 @@
     <p>이헌복 | Backend Developer</p>
 </header>
 
+<!-- 헤더 아래에 네비게이션 위치 -->
 <nav class="navbar">
     <ul>
         <li><a href="#about">자기소개</a></li>
@@ -74,5 +75,25 @@
 <footer>
     <p>© 2024 Hunbok. All Rights Reserved.</p>
 </footer>
+
+<!-- 부드러운 스크롤 기능 추가 -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll(".navbar a");
+
+        for (let link of links) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60, /* 네비게이션 높이 고려 */
+                    behavior: "smooth",
+                });
+            });
+        }
+    });
+</script>
 </body>
 </html>
