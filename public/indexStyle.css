@@ -339,48 +339,40 @@ html {
     }
 }
 
-.resume-link {
+/* 연락처 및 이력서 섹션을 가로로 정렬 */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* 연락처와 이력서 사이 간격 */
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* 연락처 스타일 */
+#contact, #contact2 {
+    text-align: center;
+}
+
+/* 이력서 스타일 */
+#contact2 a {
     font-size: 18px;
     font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 10px;
-    display: inline-block;
-    letter-spacing: 1.5px;
-    position: relative;
     color: #f8f9fa;
+    text-decoration: none;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
 }
 
-.resume-link a {
-    text-decoration: none !important;
-    color: #1e293b !important;  /* 짙은 네이비 */
-    background: linear-gradient(135deg, #f8f9fa, #e2e8f0) !important;
-    padding: 8px 18px !important;
-    border-radius: 8px !important;
-    transition: all 0.3s ease-in-out !important;
-    font-weight: 700 !important;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15) !important;
+#contact2 a:hover {
+    background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
 }
 
-.resume-link a:hover {
-    background: linear-gradient(135deg, #e2e8f0, #cbd5e1) !important;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2) !important;
-}
-
-
-.resume-link::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #facc15; /* 골드 포인트 */
-    margin: 10px auto 0;
-    border-radius: 3px;
-    transition: width 0.3s ease-in-out;
-}
-
-.resume-link:hover::after {
-    width: 120px;
-}
 
 
