@@ -360,6 +360,7 @@ html {
     font-weight: bold;
     color: #0077cc;
     transition: color 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 #contact2 a:hover {
