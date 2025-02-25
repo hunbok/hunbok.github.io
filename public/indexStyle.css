@@ -340,11 +340,10 @@ html {
 }
 
 /* 연락처 스타일 */
-#contact, contact2 a {
+#contact a {
     color: #0077cc;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
 }
 #contact a:hover {
     text-decoration: underline;
@@ -353,6 +352,14 @@ html {
 /* 연락처 및 이력서 스타일 */
 #contact, #contact2 {
     text-align: center;
+}
+
+/* 이력서 링크 스타일 (버튼이 아닌 텍스트) */
+#contact2 a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0077cc;
+    transition: color 0.3s ease-in-out;
 }
 
 #contact2 a:hover {
