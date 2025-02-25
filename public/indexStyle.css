@@ -333,8 +333,8 @@ html {
 .contact-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* 같은 높이 정렬 */
-    gap: 380px; /* 연락처와 이력서 사이 간격 */
+    align-items: flex-start; /* 상단 정렬 */
+    gap: 200px; /* 연락처와 이력서 사이 간격 */
     flex-wrap: wrap;
     margin-top: 30px;
 }
@@ -355,13 +355,12 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-grow: 1; /* 크기 균형 유지 */
+    min-height: 120px; /* 동일한 높이 유지 */
 }
 
 /* 연락처 & 이력서 제목 (h2)을 같은 높이에 배치 */
 #contact h2, #contact2 h2 {
-    margin-bottom: 10px; /* 제목과 링크 사이 여백 */
-    min-height: 40px; /* 제목 높이를 동일하게 설정 */
+    min-height: 40px; /* 제목 높이를 강제 지정 */
     display: flex;
     align-items: center;
     justify-content: center;
