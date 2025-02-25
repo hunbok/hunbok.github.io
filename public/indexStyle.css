@@ -369,9 +369,8 @@ html {
 
 /* 이력서 링크 스타일 */
 #contact2 a {
-    font-size: 18px;
-    font-weight: 500;
-    color: #1e40af;
+    font-weight: bold;
+    color: #0077cc;
     text-decoration: none;
     margin-top: 5px; /* 제목과 간격 추가 */
     transition: color 0.3s ease-in-out;
