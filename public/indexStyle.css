@@ -344,24 +344,26 @@ html {
     text-transform: uppercase;
     margin-top: 10px;
     display: inline-block;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     position: relative;
+    color: #f8f9fa;
 }
 
 .resume-link a {
     text-decoration: none;
-    color: #ffffff !important;
-    background: linear-gradient(135deg, #60a5fa, #2563eb);
-    padding: 5px 15px;
-    border-radius: 5px;
+    color: #1e293b !important;  /* 짙은 네이비 */
+    background: linear-gradient(135deg, #f8f9fa, #e2e8f0); /* 화이트-그레이 조합 */
+    padding: 8px 18px;
+    border-radius: 8px;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
 }
 
 .resume-link a:hover {
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1); /* 더 고급스러운 느낌의 은은한 변화 */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
 }
 
 .resume-link::after {
@@ -369,13 +371,14 @@ html {
     display: block;
     width: 60px;
     height: 3px;
-    background: #3b82f6;
-    margin: 8px auto 0;
+    background: #facc15; /* 골드 포인트 */
+    margin: 10px auto 0;
     border-radius: 3px;
     transition: width 0.3s ease-in-out;
 }
 
 .resume-link:hover::after {
-    width: 100px;
+    width: 120px;
 }
+
 
