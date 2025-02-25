@@ -336,20 +336,44 @@ html {
     }
 }
 
-.resume-button {
+.resume-link {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
-    border-radius: 8px;
-    text-decoration: none;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    letter-spacing: 1.2px;
+    position: relative;
 }
 
-.resume-button:hover {
-    background: linear-gradient(135deg, #2563eb, #1e3a8a);
-    transform: scale(1.05);
+.resume-link a {
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #60a5fa, #2563eb);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.resume-link a:hover {
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.resume-link::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3b82f6;
+    margin: 8px auto 0;
+    border-radius: 3px;
+    transition: width 0.3s ease-in-out;
+}
+
+.resume-link:hover::after {
+    width: 100px;
+}
+
