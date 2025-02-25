@@ -324,7 +324,7 @@ html {
     color: #f87171;
 }
 
-/* 🌟 애니메이션 */
+/*애니메이션 */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -334,4 +334,22 @@ html {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.resume-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.resume-button:hover {
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    transform: scale(1.05);
 }
