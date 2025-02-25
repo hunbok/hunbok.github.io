@@ -10,34 +10,12 @@ body {
     padding: 0;
 }
 
-/* 헤더 스타일
+/* 헤더 스타일 */
 header {
     background: linear-gradient(135deg, #374151, #111827);
     color: white;
     text-align: center;
     padding: 25px 10px;
-}*/
-
-header a {
-    color: #f8f9fa !important;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    text-decoration: none;
-    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
-    padding: 8px 16px;
-    border-radius: 6px;
-    display: inline-block;
-    margin-top: 10px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
-}
-
-header a:hover {
-    background: linear-gradient(135deg, #cbd5e1, #94a3b8);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
 }
 
 
