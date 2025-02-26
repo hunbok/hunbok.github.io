@@ -134,16 +134,16 @@ h2 {
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    overflow: hidden; /* 기존 유지 */
-    min-height: 150px; /* 박스 크기 강제 유지 */
+    overflow: hidden;
+    min-height: 180px; /* 높이 유지 */
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* 호버 시 배경색이 강제로 바뀌는 것 방지 */
 .project:hover {
-    background: #1e40af;
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    background: #ffffff !important;
 }
+
 
 .project h3 {
     color: #1e3a8a;
@@ -170,46 +170,43 @@ h2 {
     color: #ffffff !important;
 }
 
-/* 프로젝트 내용 전환 애니메이션 */
+/* 프로젝트 내용 컨테이너 */
 .project-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90%;  /* 가로 크기 유지 */
-    transform: translate(-50%, -50%); /* 가운데 정렬 */
+    width: 90%;
+    transform: translate(-50%, -50%);
     text-align: center;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* 기본 컨텐츠 */
 .default-content {
     opacity: 1;
-    display: flex; /* 숨겨져도 공간 유지 */
-    justify-content: center;
-    align-items: center;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* 초기 상태 - 호버 컨텐츠 숨기기 */
+/* 호버 컨텐츠 숨김 */
 .hover-content {
     opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(20px); /* 부드러운 등장 효과 */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* 프로젝트 카드에 마우스를 올리면 기본 컨텐츠 숨기고, 호버 컨텐츠 보이기 */
+/* 프로젝트 카드에 마우스를 올리면 내용 변경 */
 .project:hover .default-content {
     opacity: 0;
-    transform: translateY(-20px);
+    visibility: hidden;
 }
 
 .project:hover .hover-content {
     opacity: 1;
-    transform: translateY(0);
+    visibility: visible;
 }
 
-/* 호버된 내용이 애니메이션과 함께 부드럽게 등장 */
+/* 호버 시 애니메이션 자연스럽게 등장 */
 .hover-content h3, .hover-content .card {
     opacity: 0;
     transform: translateY(10px);
