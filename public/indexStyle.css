@@ -128,7 +128,7 @@ h2 {
 }
 
 /* 프로젝트 카드 기본 스타일 */
-.project {
+.project1, .profect2 {
     position: relative;
     background: #ffffff; /* 기본 흰색 */
     padding: 30px;
@@ -158,7 +158,7 @@ h2 {
 }
 
 /* 프로젝트 제목 */
-.project h3 {
+.project1, .profect2 h3 {
     color: #1e3a8a;
     font-size: 22px;
     font-weight: 600;
@@ -169,12 +169,12 @@ h2 {
 }
 
 /* 호버 시 제목 색상 변경 */
-.project:hover h3 {
+.project1, .profect2:hover h3 {
     color: #ffffff;
 }
 
 /* 프로젝트 내용 (기본) */
-.project-content {
+.project1, .profect2-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -200,20 +200,20 @@ h2 {
 }
 
 /* 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
-.project:hover .default-content {
+.project1, .profect2:hover .default-content {
     opacity: 0;
     visibility: hidden;
     transform: translate(-50%, -50%) scale(0.95);
 }
 
-.project:hover .hover-content {
+.project1, .profect2:hover .hover-content {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
 }
 
 /* 주요 기능 & 내가 구현한 기능 */
-.project p {
+.project1, .profect2 p {
     text-align: center;
     font-size: 18px;
     font-weight: 500;
@@ -224,7 +224,7 @@ h2 {
 }
 
 /* 프로젝트 기능 리스트 */
-.project ul {
+.project1, .profect2 ul {
     list-style: none;
     padding: 0;
     margin: 15px 0 0 0;
@@ -237,12 +237,12 @@ h2 {
 }
 
 /* 호버 시 리스트 색상 변경 */
-.project:hover ul {
+.project1, .profect2:hover ul {
     color: #ffffff;
 }
 
 /* 카드 스타일 */
-.project .card {
+.project1, .profect2, .card {
     background: transparent; /* 배경 제거 */
     padding: 15px;
     border-radius: 10px;
@@ -254,7 +254,7 @@ h2 {
 }
 
 /* 호버 시 카드 스타일 변경 */
-.project:hover .card {
+.project1, .profect2:hover .card {
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
