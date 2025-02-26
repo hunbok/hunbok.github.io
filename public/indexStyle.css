@@ -165,19 +165,15 @@ h2 {
 .project-content {
     width: 100%;
     text-align: center;
-    position: relative;
-}
-
-/* ✅ 위치 변경 없이 자연스럽게 내용 교체 */
-.default-content, .hover-content {
     position: absolute;
-    width: 100%;
     left: 0;
     top: 0;
+    opacity: 1;
+    visibility: visible;
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-/* 기본 상태 */
+/* ✅ 위치 변경 없이 자연스럽게 내용 교체 */
 .default-content {
     opacity: 1;
     visibility: visible;
