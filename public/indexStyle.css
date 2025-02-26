@@ -152,7 +152,7 @@ h2 {
 .project:hover {
     background: #e6e6e6;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
-    min-height: auto; /* 내용이 많아질 경우 자연스럽게 확장 */
+    height: auto; /* 내용이 많아질 경우 자연스럽게 확장 */
 }
 
 /* 프로젝트 제목 (위치 고정) */
