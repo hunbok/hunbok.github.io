@@ -129,76 +129,86 @@ h2 {
 
 /* 프로젝트 카드 기본 스타일 */
 .project {
-    position: relative;  /* ✅ 위치 고정 */
+    position: relative;
     background: #f7f7f7; /* 연한 회색 배경 */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 25px;
-    overflow: hidden;
+    overflow: hidden; /* ✅ 내용이 많아지면 자동 확장 */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    transition: background 0.4s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, min-height 0.3s ease-in-out;
+    justify-content: flex-start; /* ✅ 제목을 위쪽에 고정 */
+    align-items: center;
+    transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out, padding-bottom 0.4s ease-in-out;
 }
 
-/* 💡 내용 길이에 따라 카드 크기 자동 조정 */
+/* ✅ 기본 상태에서 최소 높이 지정 */
 .project {
-    min-height: auto; /* ✅ 높이를 자동으로 조정 */
+    min-height: 200px; /* 프로젝트 크기가 너무 작아지지 않도록 설정 */
 }
 
-/* 호버 시 카드 스타일 변경 */
+/* 호버 시 박스 크기가 자동으로 확장되도록 */
 .project:hover {
-    background: #e6e6e6; /* 더 연한 회색 */
-    color: #333; /* 텍스트 색상 */
+    background: #e6e6e6;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+    padding-bottom: 40px; /* 내용이 많아질 경우 자연스럽게 확장 */
 }
 
-/* 프로젝트 제목 */
+/* 프로젝트 제목 (위치 고정) */
 .project h3 {
     color: #1e3a8a;
     font-size: 22px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
     transition: color 0.3s ease-in-out;
+    position: relative;
+    z-index: 2; /* ✅ 제목이 항상 고정된 위치 유지 */
 }
 
-/* 호버 시 제목 색상 유지 */
-.project:hover h3 {
-    color: #1e3a8a;
-}
-
-/* 프로젝트 내용 (기본) */
+/* 프로젝트 내용 */
 .project-content {
-    position: relative; /* ✅ 위치 변경되지 않도록 설정 */
     width: 100%;
     text-align: center;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    position: relative;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out;
+}
+
+/* 기본 컨텐츠 */
+.default-content {
+    opacity: 1;
+    visibility: visible;
+    max-height: 300px; /* 초기 최대 높이 */
+    transform: translateY(0);
+}
+
+/* 호버 시 기본 컨텐츠 숨김 */
+.project:hover .default-content {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transform: translateY(-10px);
 }
 
 /* 호버 컨텐츠 */
 .hover-content {
     opacity: 0;
     visibility: hidden;
-    position: relative;  /* ✅ 위치 변경되지 않도록 설정 */
-    width: 100%;
-    text-align: center;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    max-height: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out;
 }
 
-/* 💡 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
-.project:hover .default-content {
-    opacity: 0;
-    visibility: hidden;
-}
-
+/* ✅ 호버 시 새로운 내용이 자연스럽게 나타나고, 아래로 확장 */
 .project:hover .hover-content {
     opacity: 1;
     visibility: visible;
+    max-height: 1000px; /* 내용 길이에 맞게 확장 */
+    transform: translateY(0);
 }
 
 /* 주요 기능 & 내가 구현한 기능 */
@@ -209,44 +219,36 @@ h2 {
     color: #555;
     font-family: 'Noto Sans KR', sans-serif;
     margin-bottom: 10px;
-    transition: color 0.3s ease-in-out;
 }
 
 /* 프로젝트 기능 리스트 */
 .project ul {
     list-style: none;
     padding: 0;
-    margin: 15px auto 0 auto;
+    margin: 15px auto;
     text-align: center;
     font-size: 16px;
     line-height: 1.7;
     color: #333;
     font-family: 'Noto Sans KR', sans-serif;
-    transition: color 0.3s ease-in-out;
-}
-
-/* 호버 시 리스트 색상 변경 */
-.project:hover ul {
-    color: #444;
 }
 
 /* 카드 스타일 */
 .project .card {
-    background: transparent; /* 배경 제거 */
+    background: transparent;
     padding: 15px;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* 호버 시 카드 스타일 변경 */
+/* ✅ 호버 시 카드 스타일 유지 */
 .project:hover .card {
     background: transparent;
     color: #333;
 }
-
 
 /* 기술 스택 전체 스타일 */
 #tech-stack {
