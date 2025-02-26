@@ -144,8 +144,7 @@ h2 {
 }
 
 .project {
-    min-height: 200px; /* ✅ 기본 최소 높이 유지 */
-    padding: 30px; /* ✅ 기본 패딩 설정 */
+    min-height: 250px; /* ✅ 기본 최소 높이 유지 */
     transition: background 0.4s ease-in-out, box-shadow 0.3s ease-in-out, min-height 0.4s ease-in-out;
 }
 
@@ -168,14 +167,14 @@ h2 {
     z-index: 2; /* ✅ 제목이 항상 고정된 위치 유지 */
 }
 
-/* 프로젝트 내용 */
 .project-content {
     width: 100%;
     text-align: center;
     opacity: 1;
     visibility: visible;
     position: relative;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out;
+    padding: 20px; /* ✅ 기본 패딩 설정 */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
 }
 
 /* 기본 컨텐츠 */
@@ -192,6 +191,7 @@ h2 {
     visibility: hidden;
     max-height: 0;
     transform: translateY(-5px);
+    padding: 0; /* ✅ 패딩을 없애서 높이 조정 */
 }
 
 /* 호버 컨텐츠 */
@@ -200,7 +200,8 @@ h2 {
     visibility: hidden;
     max-height: 0;
     transform: translateY(10px);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out;
+    padding: 0; /* ✅ 패딩을 없애서 높이 조정 */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
 }
 
 /* ✅ 호버 시 새로운 내용이 자연스럽게 나타나고, 아래로 확장 */
@@ -209,6 +210,7 @@ h2 {
     visibility: visible;
     max-height: 1000px; /* 내용 길이에 맞게 확장 */
     transform: translateY(0);
+    padding: 20px; /* ✅ 원래 기본 패딩을 유지 */
 }
 
 /* 주요 기능 & 내가 구현한 기능 */
