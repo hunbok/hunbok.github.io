@@ -137,7 +137,7 @@ h2 {
 }
 
 .project:hover {
-    background: #cccccc;
+    background: #ababaa;
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
