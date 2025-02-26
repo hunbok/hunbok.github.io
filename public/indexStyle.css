@@ -128,22 +128,19 @@ h2 {
 }
 
 .project {
-    position: relative;
     background: #ffffff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    overflow: hidden;
-    min-height: 180px; /* 높이 유지 */
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
-/* 호버 시 배경색이 강제로 바뀌는 것 방지 */
 .project:hover {
-    background: #ffffff !important;
+    background: #1e40af;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
-
 
 .project h3 {
     color: #1e3a8a;
@@ -155,74 +152,9 @@ h2 {
 }
 
 .project:hover h3,
-.project:hover p {
-    color: #ffffff !important; /* 모든 텍스트 흰색 */
-}
-
-.project ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
+.project:hover p,
 .project:hover ul {
-    opacity: 1;
-    color: #ffffff !important;
-}
-
-/* 프로젝트 내용 컨테이너 */
-.project-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-/* 기본 컨텐츠 */
-.default-content {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-/* 호버 컨텐츠 숨김 */
-.hover-content {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-/* 프로젝트 카드에 마우스를 올리면 내용 변경 */
-.project:hover .default-content {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.project:hover .hover-content {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* 호버 시 애니메이션 자연스럽게 등장 */
-.hover-content h3, .hover-content .card {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInUp 0.5s ease-in-out forwards;
-    animation-delay: 0.1s;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    color: #ffffff !important; /* 모든 텍스트 흰색 */
 }
 
 /* 기술 스택 전체 스타일 */
