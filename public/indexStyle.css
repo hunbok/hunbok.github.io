@@ -161,40 +161,48 @@ h2 {
     transition: color 0.3s ease-in-out;
 }
 
-/* 프로젝트 내용 (기본) */
+/* 프로젝트 내용 */
 .project-content {
     width: 100%;
     text-align: center;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, height 0.4s ease-in-out;
+    position: relative;
 }
 
 /* ✅ 위치 변경 없이 자연스럽게 내용 교체 */
-.default-content {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
+.default-content, .hover-content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-.hover-content {
-    display: none;
+/* 기본 상태 */
+.default-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 호버 시 기본 컨텐츠 사라지는 애니메이션 */
+.project:hover .default-content {
     opacity: 0;
     visibility: hidden;
-    transform: scale(0.95); /* 💡 약간 축소된 상태에서 커지는 효과 */
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateY(-10px); /* 위로 사라지는 효과 */
 }
 
-/* ✅ 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
-.project:hover .default-content {
-    display: none;
+/* 호버 컨텐츠 기본 상태 */
+.hover-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* 아래에서 올라오는 효과 */
+}
+
+/* ✅ 마우스를 올리면 새로운 컨텐츠 부드럽게 등장 */
+.project:hover .hover-content {
     opacity: 1;
     visibility: visible;
-    transform: scale(1);
-}
-
-.project:hover .hover-content {
-    display: block;
+    transform: translateY(0);
 }
 
 /* 주요 기능 & 내가 구현한 기능 */
@@ -242,6 +250,7 @@ h2 {
     background: transparent;
     color: #333;
 }
+
 
 /* 기술 스택 전체 스타일 */
 #tech-stack {
