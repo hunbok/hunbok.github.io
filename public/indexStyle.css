@@ -185,7 +185,7 @@ h2 {
     visibility: visible;
     max-height: 280px; /* 초기 최대 높이 */
     transform: translateY(0);
-     padding: 20px 0; /* ✅ 위/아래 패딩 동일 */
+    padding: 20px 0; /* ✅ 위/아래 패딩 동일 */
 }
 
 /* 호버 시 기본 컨텐츠 숨김 */
@@ -203,7 +203,7 @@ h2 {
     visibility: hidden;
     max-height: 0;
     transform: translateY(10px);
-    padding: 0; /* ✅ 패딩을 없애서 높이 조정 */
+    padding: 20px; /* ✅ 패딩을 없애서 높이 조정 */
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
 }
 
