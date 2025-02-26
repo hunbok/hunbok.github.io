@@ -155,9 +155,19 @@ h2 {
 }
 
 .project:hover h3,
-.project:hover p,
-.project:hover ul {
+.project:hover p {
     color: #ffffff !important; /* 모든 텍스트 흰색 */
+}
+
+.project ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project:hover ul {
+    opacity: 1;
+    color: #ffffff !important;
 }
 
 /* 프로젝트 내용 전환 애니메이션 */
