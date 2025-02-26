@@ -191,7 +191,7 @@ h2 {
     opacity: 0;
     visibility: hidden;
     max-height: 0;
-    transform: translateY(-10px);
+    transform: translateY(-15px);
 }
 
 /* 호버 컨텐츠 */
