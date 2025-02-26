@@ -128,32 +128,30 @@ h2 {
 }
 
 /* 프로젝트 카드 기본 스타일 */
-.project1, .project2 {
+.project {
     position: relative;
-    background: #ffffff;
+    background: #ffffff; /* 기본 흰색 */
     padding: 30px;
-    max-width: 900px; /* 📌 크기 조정 (최대 900px) */
-    min-width: 400px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-    margin: 20px auto; /* 📌 가운데 정렬 */
+    margin-bottom: 25px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: background 0.4s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    min-height: 300px; /* ✅ 기본 높이 확보 */
+    transition: background 0.4s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* 호버 시 카드 스타일 변경 */
-.project1:hover, .project2:hover {
-    background: #2c2c2c;
-    color: #ffffff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    transform: scale(1.02); /* 📌 크기 확대 효과 */
+.project:hover {
+    background: #2c2c2c; /* 감각적인 어두운 회색 */
+    color: #ffffff; /* 텍스트 흰색 */
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* 프로젝트 제목 */
-.project1 h3, .project2 h3 {
+.project h3 {
     color: #1e3a8a;
     font-size: 22px;
     font-weight: 600;
@@ -164,43 +162,44 @@ h2 {
 }
 
 /* 호버 시 제목 색상 변경 */
-.project1:hover h3, .project2:hover h3 {
+.project:hover h3 {
     color: #ffffff;
 }
 
 /* 프로젝트 내용 (기본) */
-.project1 .project-content, .project2 .project-content {
-    position: relative; /* 📌 absolute 제거 */
+.project-content {
+    position: relative; /* ✅ absolute 제거 */
+    width: 100%;
     text-align: center;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 /* 호버 컨텐츠 */
-.project1 .hover-content, .project2 .hover-content {
+.hover-content {
     opacity: 0;
     visibility: hidden;
-    position: relative;
+    position: relative; /* ✅ absolute 제거 */
+    width: 100%;
+    height: auto; /* ✅ 내용에 맞게 크기 조정 */
     padding: 20px;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 /* 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
-.project1:hover .default-content, .project2:hover .default-content {
+.project:hover .default-content {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
 }
 
-.project1:hover .hover-content, .project2:hover .hover-content {
+.project:hover .hover-content {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
 }
 
 /* 주요 기능 & 내가 구현한 기능 */
-.project1 p, .project2 p {
+.project p {
     text-align: center;
     font-size: 18px;
     font-weight: 500;
@@ -211,7 +210,7 @@ h2 {
 }
 
 /* 프로젝트 기능 리스트 */
-.project1 ul, .project2 ul {
+.project ul {
     list-style: none;
     padding: 0;
     margin: 15px 0 0 0;
@@ -224,13 +223,13 @@ h2 {
 }
 
 /* 호버 시 리스트 색상 변경 */
-.project1:hover ul, .project2:hover ul {
+.project:hover ul {
     color: #ffffff;
 }
 
 /* 카드 스타일 */
-.project1 .card, .project2 .card {
-    background: transparent;
+.project .card {
+    background: transparent; /* 배경 제거 */
     padding: 15px;
     border-radius: 10px;
     margin-top: 15px;
@@ -240,10 +239,11 @@ h2 {
 }
 
 /* 호버 시 카드 스타일 변경 */
-.project1:hover .card, .project2:hover .card {
+.project:hover .card {
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
+
 
 /* 기술 스택 전체 스타일 */
 #tech-stack {
