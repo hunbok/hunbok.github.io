@@ -127,12 +127,12 @@ h2 {
     animation: fadeInUp 0.8s ease-out;
 }
 
-/* 프로젝트 카드 */
+/* 프로젝트 카드 기본 스타일 */
 .project {
     position: relative;
     background: #ffffff; /* 기본 흰색 */
     padding: 30px;
-    border-radius: 16px; /* 둥근 모서리 */
+    border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 25px;
     overflow: hidden;
@@ -144,7 +144,7 @@ h2 {
 
 /* 호버 시 카드 스타일 변경 */
 .project:hover {
-    background: #2f2f2f; /* 감각적인 어두운 회색 */
+    background: #2c2c2c; /* 감각적인 어두운 회색 */
     color: #ffffff; /* 텍스트 흰색 */
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
 }
@@ -165,6 +165,45 @@ h2 {
     color: #ffffff;
 }
 
+/* 프로젝트 내용 (기본) */
+.project-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    min-height: 250px; /* 🔥 크기 유지 */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* 호버 컨텐츠 */
+.hover-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: transparent; /* 배경 없음 */
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
+.project:hover .default-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+.project:hover .hover-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 /* 주요 기능 & 내가 구현한 기능 */
 .project p {
     text-align: center;
@@ -174,18 +213,6 @@ h2 {
     font-family: 'Noto Sans KR', sans-serif;
     margin-bottom: 10px;
     transition: color 0.3s ease-in-out;
-}
-
-/* 호버 시 내용이 "내가 구현한 기능"으로 변경 */
-.project p::after {
-    content: "주요 기능";
-    display: block;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.project:hover p::after {
-    content: "내가 구현한 기능";
-    opacity: 1;
 }
 
 /* 프로젝트 기능 리스트 */
@@ -206,7 +233,7 @@ h2 {
     color: #ffffff;
 }
 
-/* 카드 내 개별 항목 */
+/* 카드 스타일 */
 .project .card {
     background: transparent; /* 배경 제거 */
     padding: 15px;
@@ -223,6 +250,7 @@ h2 {
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
 }
+
 
 /* 기술 스택 전체 스타일 */
 #tech-stack {
