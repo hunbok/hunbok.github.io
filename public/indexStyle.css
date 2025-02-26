@@ -151,7 +151,7 @@ h2 {
 .project:hover {
     background: #e6e6e6;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
-    min-height: 250px; /* ✅ 내용에 따라 자동 확장 (패딩 변경 X) */
+    min-height: 280px; /* ✅ 내용에 따라 자동 확장 (패딩 변경 X) */
 }
 
 /* 프로젝트 제목 (위치 고정) */
@@ -167,21 +167,23 @@ h2 {
     z-index: 2; /* ✅ 제목이 항상 고정된 위치 유지 */
 }
 
+/* 프로젝트 내용 */
 .project-content {
     width: 100%;
     text-align: center;
     opacity: 1;
     visibility: visible;
     position: relative;
-    padding: 20px; /* ✅ 기본 패딩 설정 */
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    max-height: 280px; /* ✅ 초기 높이 설정 */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, max-height 0.4s ease-in-out;
+    padding: 20px; /* ✅ 항상 동일한 패딩 유지 */
 }
 
 /* 기본 컨텐츠 */
 .default-content {
     opacity: 1;
     visibility: visible;
-    max-height: 300px; /* 초기 최대 높이 */
+    max-height: 280px; /* 초기 최대 높이 */
     transform: translateY(0);
 }
 
