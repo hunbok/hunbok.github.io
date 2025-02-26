@@ -139,7 +139,9 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 300px; /* ✅ 기본 높이 확보 */
+    align-items: center;
+    min-height: auto; /* 🔥 내용에 맞게 크기 자동 조정 */
+    height: auto;
     transition: background 0.4s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -166,11 +168,16 @@ h2 {
     color: #ffffff;
 }
 
-/* 프로젝트 내용 (기본) */
+/* 프로젝트 내용 */
 .project-content {
-    position: relative; /* ✅ absolute 제거 */
     width: 100%;
     text-align: center;
+    position: relative; /* 🔥 absolute → relative 변경하여 위치 유지 */
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* 기본 컨텐츠 */
+.default-content {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
@@ -180,14 +187,13 @@ h2 {
 .hover-content {
     opacity: 0;
     visibility: hidden;
-    position: relative; /* ✅ absolute 제거 */
+    position: absolute; /* 기존 위치 유지 */
     width: 100%;
-    height: auto; /* ✅ 내용에 맞게 크기 조정 */
-    padding: 20px;
+    text-align: center;
     transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
-/* 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
+/* 🔥 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
 .project:hover .default-content {
     opacity: 0;
     visibility: hidden;
@@ -196,17 +202,6 @@ h2 {
 .project:hover .hover-content {
     opacity: 1;
     visibility: visible;
-}
-
-/* 주요 기능 & 내가 구현한 기능 */
-.project p {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    color: #666;
-    font-family: 'Noto Sans KR', sans-serif;
-    margin-bottom: 10px;
-    transition: color 0.3s ease-in-out;
 }
 
 /* 프로젝트 기능 리스트 */
@@ -229,11 +224,11 @@ h2 {
 
 /* 카드 스타일 */
 .project .card {
-    background: transparent; /* 배경 제거 */
+    background: transparent;
     padding: 15px;
     border-radius: 10px;
     margin-top: 15px;
-    text-align: left;
+    text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
