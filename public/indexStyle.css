@@ -164,6 +164,10 @@ h2 {
 .project-content {
     width: 100%;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
@@ -171,14 +175,14 @@ h2 {
 .default-content {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .hover-content {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px); /* 💡 살짝 아래에서 올라오는 효과 */
+    transform: translate(-50%, -50%) scale(0.95); /* 💡 약간 축소된 상태에서 커지는 효과 */
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
@@ -186,13 +190,13 @@ h2 {
 .project:hover .default-content {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px); /* 💡 위로 사라지는 효과 */
+    transform: translate(-50%, -50%) scale(1.05); /* 💡 약간 커지면서 사라지는 효과 */
 }
 
 .project:hover .hover-content {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0); /* 💡 자연스럽게 등장 */
+    transform: translate(-50%, -50%) scale(1); /* 💡 원래 크기로 부드럽게 등장 */
 }
 
 /* 주요 기능 & 내가 구현한 기능 */
