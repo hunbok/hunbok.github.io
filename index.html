@@ -97,6 +97,60 @@
         </div>
     </section>
 
+
+    <section id="phase1-project">
+        <h2>1차 프로젝트</h2>
+        <div class="card">
+            <h3>기획</h3>
+            <ul>
+                <li>ERD</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>개발</h3>
+            <ul>
+                <li>MY SQL 설계 및 구축</li>
+                <li>CRUD 구현</li>
+                <li>페이징네이션</li>
+                <li>로그인 화면 UI</li>
+                <li>로그인, 로그아웃</li>
+                <li>댓글 / 좋아요 / 싫어요 기능</li>
+                <li>공지사항 / 인기글 기능</li>
+                <li>이전글 / 다음글 기능</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="my-contributions">
+        <h2>내가 맡은 기능</h2>
+        <div class="card">
+            <h3>기획</h3>
+            <ul>
+                <li>개인 기능 명세서</li>
+                <li>요구사항 명세서</li>
+                <li>ERD</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>개발</h3>
+            <ul>
+                <li>전문가 포트폴리오 관리 (CRUD)</li>
+                <li>일반회원 전문가 전환 신청</li>
+                <li>전문가 신청 리스트 조회</li>
+                <li>전문가 전환 신청 관리자 승인/거부 처리</li>
+                <li>전문가 전환 승인 수정 처리</li>
+                <li>회원 정보 수정</li>
+                <li>신고 회원 조회</li>
+                <li>신고 수 증가</li>
+                <li>회원 및 게시물 신고 기능</li>
+                <li>신고 회원 및 게시물 비활성화/활성화 처리</li>
+                <li>회원 영구정지 / 기간정지 처리</li>
+                <li>기간정지 자동 해제</li>
+                <li>페이징 네이션</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="architecture">
         <h2>프로젝트 시스템 아키텍처</h2>
         <img src="./public/images/SystemArchitecture.png" alt="프로젝트 아키텍처 이미지">
@@ -152,6 +206,100 @@
             }
         });
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project");
+    const phase1ProjectSection = document.getElementById("phase1-project");
+    const myContributionsSection = document.getElementById("my-contributions");
+
+    // 원래의 섹션 내용 저장
+    const originalPhase1Content = phase1ProjectSection.innerHTML;
+    const originalMyContributionsContent = myContributionsSection.innerHTML;
+
+    // 새로운 내용 (호버 시 표시될 내용)
+    const phase1ProjectHTML = `
+        <h2>1차 프로젝트</h2>
+        <div class="card fade-in">
+            <h3>기획</h3>
+            <ul>
+                <li>ERD</li>
+            </ul>
+        </div>
+        <div class="card fade-in">
+            <h3>개발</h3>
+            <ul>
+                <li>MY SQL 설계 및 구축</li>
+                <li>CRUD 구현</li>
+                <li>페이징네이션</li>
+                <li>로그인 화면 UI</li>
+                <li>로그인, 로그아웃</li>
+                <li>댓글 / 좋아요 / 싫어요 기능</li>
+                <li>공지사항 / 인기글 기능</li>
+                <li>이전글 / 다음글 기능</li>
+            </ul>
+        </div>
+    `;
+
+    const myContributionsHTML = `
+        <h2>내가 맡은 기능</h2>
+        <div class="card fade-in">
+            <h3>기획</h3>
+            <ul>
+                <li>개인 기능 명세서</li>
+                <li>요구사항 명세서</li>
+                <li>ERD</li>
+            </ul>
+        </div>
+        <div class="card fade-in">
+            <h3>개발</h3>
+            <ul>
+                <li>전문가 포트폴리오 관리 (CRUD)</li>
+                <li>일반회원 전문가 전환 신청</li>
+                <li>전문가 신청 리스트 조회</li>
+                <li>전문가 전환 신청 관리자 승인/거부 처리</li>
+                <li>전문가 전환 승인 수정 처리</li>
+                <li>회원 정보 수정</li>
+                <li>신고 회원 조회</li>
+                <li>신고 수 증가</li>
+                <li>회원 및 게시물 신고 기능</li>
+                <li>신고 회원 및 게시물 비활성화/활성화 처리</li>
+                <li>회원 영구정지 / 기간정지 처리</li>
+                <li>기간정지 자동 해제</li>
+                <li>페이징 네이션</li>
+            </ul>
+        </div>
+    `;
+
+    projects.forEach(project => {
+        project.addEventListener("mouseenter", function () {
+            if (project.querySelector("h3").textContent.includes("여기용")) {
+                phase1ProjectSection.style.opacity = "0";
+                setTimeout(() => {
+                    phase1ProjectSection.innerHTML = phase1ProjectHTML;
+                    phase1ProjectSection.style.opacity = "1";
+                }, 300);
+            } else if (project.querySelector("h3").textContent.includes("OneStack")) {
+                myContributionsSection.style.opacity = "0";
+                setTimeout(() => {
+                    myContributionsSection.innerHTML = myContributionsHTML;
+                    myContributionsSection.style.opacity = "1";
+                }, 300);
+            }
+        });
+
+        project.addEventListener("mouseleave", function () {
+            phase1ProjectSection.style.opacity = "0";
+            myContributionsSection.style.opacity = "0";
+            setTimeout(() => {
+                phase1ProjectSection.innerHTML = originalPhase1Content;
+                myContributionsSection.innerHTML = originalMyContributionsContent;
+                phase1ProjectSection.style.opacity = "1";
+                myContributionsSection.style.opacity = "1";
+            }, 300);
+        });
+    });
+});
+
 </script>
 <script src="public/index.js"></script>
 </body>
