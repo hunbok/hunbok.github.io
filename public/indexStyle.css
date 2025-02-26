@@ -129,29 +129,25 @@ h2 {
 
 /* 프로젝트 카드 기본 스타일 */
 .project {
-    position: relative;  /* ✅ 위치 고정 */
+    position: relative;
     background: #f7f7f7; /* 연한 회색 배경 */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 25px;
-    overflow: hidden;
+    overflow: hidden; /* ✅ 내용이 많아지면 자동 확장 */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: background 0.4s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, min-height 0.3s ease-in-out;
+    transition: background 0.4s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, height 0.4s ease-in-out;
 }
 
-/* 💡 내용 길이에 따라 카드 크기 자동 조정 */
-.project {
-    min-height: auto; /* ✅ 높이를 자동으로 조정 */
-}
-
-/* 호버 시 카드 스타일 변경 */
+/* ✅ 카드 크기를 내용에 맞게 자동 조정 */
 .project:hover {
     background: #e6e6e6; /* 더 연한 회색 */
-    color: #333; /* 텍스트 색상 */
+    color: #333;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+    height: auto; /* 💡 내용 길이에 따라 자동 조정 */
 }
 
 /* 프로젝트 제목 */
@@ -165,40 +161,29 @@ h2 {
     transition: color 0.3s ease-in-out;
 }
 
-/* 호버 시 제목 색상 유지 */
-.project:hover h3 {
-    color: #1e3a8a;
-}
-
 /* 프로젝트 내용 (기본) */
 .project-content {
-    position: relative; /* ✅ 위치 변경되지 않도록 설정 */
     width: 100%;
     text-align: center;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, height 0.4s ease-in-out;
 }
 
-/* 호버 컨텐츠 */
+/* ✅ 위치 변경 없이 자연스럽게 내용 교체 */
+.default-content {
+    display: block;
+}
+
 .hover-content {
-    opacity: 0;
-    visibility: hidden;
-    position: relative;  /* ✅ 위치 변경되지 않도록 설정 */
-    width: 100%;
-    text-align: center;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    display: none;
 }
 
-/* 💡 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
+/* ✅ 마우스를 올리면 기본 컨텐츠 사라지고 호버 컨텐츠 표시 */
 .project:hover .default-content {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
 }
 
 .project:hover .hover-content {
-    opacity: 1;
-    visibility: visible;
+    display: block;
 }
 
 /* 주요 기능 & 내가 구현한 기능 */
@@ -216,7 +201,7 @@ h2 {
 .project ul {
     list-style: none;
     padding: 0;
-    margin: 15px auto 0 auto;
+    margin: 15px auto;
     text-align: center;
     font-size: 16px;
     line-height: 1.7;
@@ -225,14 +210,14 @@ h2 {
     transition: color 0.3s ease-in-out;
 }
 
-/* 호버 시 리스트 색상 변경 */
+/* ✅ 호버 시 길이가 길어지면 자동으로 확장 */
 .project:hover ul {
     color: #444;
 }
 
 /* 카드 스타일 */
 .project .card {
-    background: transparent; /* 배경 제거 */
+    background: transparent;
     padding: 15px;
     border-radius: 10px;
     margin-top: 15px;
@@ -241,11 +226,12 @@ h2 {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* 호버 시 카드 스타일 변경 */
+/* ✅ 호버 시 카드 스타일 유지 */
 .project:hover .card {
     background: transparent;
     color: #333;
 }
+
 
 
 /* 기술 스택 전체 스타일 */
